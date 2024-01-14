@@ -105,9 +105,25 @@ def chart_data_mois(request):
     }
     return JsonResponse(data)
 
-def sendtele():
+def sendtele(self):
     token = '6523598713:AAG0mAkw9-nvRjIqw7KvWAEbRU_qXr1ClAI'
     rece_id = 6836612736
     bot = telepot.Bot(token)
     bot.sendMessage(rece_id, 'la température depasse la normale')
     print(bot.sendMessage(rece_id, 'OK.'))
+
+from twilio.rest import Client
+
+def sendwhatsapp():
+    # Alertwhatsapp
+    account_sid = 'AC8947e8343732085ce0d7ebb5bfac63c3'
+    auth_token = '875e33ac4d1b7a4a463e4b485724cfbf'
+    client = Client(account_sid, auth_token)
+    message = client.messages.create(
+        from_='whatsapp:+14155238886',
+        body='Il y a une alerte importante sur votre Capteur la température dépasse le seuil',
+        to = 'whatsapp:+212639156451'
+    )
+
+
+

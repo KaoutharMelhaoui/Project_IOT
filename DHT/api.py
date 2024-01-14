@@ -5,6 +5,7 @@ from rest_framework import status, generics
 from rest_framework.response import Response
 from django.core.mail import send_mail
 from django.conf import settings
+from twilio.rest import Client
 import rest_framework
 @api_view(['GET'])
 def Dlist(request):
@@ -16,3 +17,4 @@ class Dhtviews(generics.CreateAPIView):
 
     queryset = Dht11.objects.all()
     serializer_class = DHT11serialize
+

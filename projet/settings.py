@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'DHT',
     'rest_framework',
+    'twilio',
 ]
 
 MIDDLEWARE = [
@@ -134,4 +135,4 @@ EMAIL_HOST_USER = 'kaouthar.melhaoui@gmail.com'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = '587'
 EMAIL_USE_TLS = True
-EMAIL_HOST_PASSWORD ='cdvavqlvmc408KA'
+EMAIL_HOST_PASSWORD ='umck hkbb nlqh wqzt'
